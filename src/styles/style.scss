@@ -1,0 +1,86 @@
+
+$primary-color: #5e5f5e;
+$secondary-color: #555555;
+$primary-gradient: linear-gradient($primary-color, $secondary-color);
+$hover-background-color: rgba(255, 255, 255, 0.2);
+$text-color: white;
+@mixin font {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+// Сброс стилей для всех элементов
+* {
+    background-color: $primary-color;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body {
+    @include font();
+}
+
+// Стили для хедера
+.header {
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+
+        .nav-links {
+            list-style-type: none; // Убираем маркеры списка
+            display: flex;
+
+            li {
+                margin: 0 15px; // Отступы между пунктами
+
+                a {
+                    text-decoration: none; // Убираем подчеркивание
+                    color: $text-color; // Использование переменной
+                    font-weight: bold;
+                    padding: 10px 15px;
+                    transition: background-color 0.3s; // Плавный переход цвета фона
+                    background-color: $secondary-color;
+
+                    &:hover {
+                        background-color: $hover-background-color; // Использование переменной
+                        border-radius: 5px; // Скругление углов
+                    }
+                }
+            }
+        }
+    }
+}
+
+#app {
+    border: 5px solid $primary-color;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: calc(100vh - 180px);
+    width: 100%;
+  }
+
+.footer {
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    .socials a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

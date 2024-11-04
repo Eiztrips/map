@@ -1,0 +1,68 @@
+* {
+  background-color: #5e5f5e;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.header .navbar .nav-links {
+  list-style-type: none;
+  display: flex;
+}
+.header .navbar .nav-links li {
+  margin: 0 15px;
+}
+.header .navbar .nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+  background-color: #555555;
+}
+.header .navbar .nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+#app {
+  border: 5px solid #5e5f5e;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: calc(100vh - 180px);
+  width: 100%;
+}
+
+.footer {
+  background-color: #5e5f5e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.footer .socials a {
+  color: white;
+  text-decoration: none;
+}
+.footer .socials a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
